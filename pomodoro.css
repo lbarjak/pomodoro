@@ -1,0 +1,79 @@
+body {
+    background-color: rgb(80, 80, 80);
+}
+
+#main {
+    background-color: gray;
+    width: 500px;
+    height: 400px;
+    border-style: solid;
+    border-color: rgb(80, 80, 80);
+    border-radius: 5px;
+    border-width: 1px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    /*
+    padding: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+    */
+}
+
+#title,
+#by {
+    color: orange;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+
+#space {
+    letter-spacing: 0px;
+    font-size: 20px;
+}
+
+#buttons {
+    margin-top: 5px;
+    text-align: center;
+}
+
+#buttons2 {
+    text-align: center;
+}
+
+.btn-orange {
+    color: #f8f8f8;
+    background-color: #FE9700;
+    border-color: #e78a01;
+}
+
+.btn-orange:hover {
+    color: #fff;
+    background-color: #e78a01;
+    border-color: #e78a01;
+}
+
+.btn-teal {
+    color: #f8f8f8;
+    background-color: #009587;
+    border-color: #018175;
+}
+
+.btn-teal:hover {
+    color: #fff;
+    background-color: #018175;
+    border-color: #018175;
+}
+
+.btn-pink {
+    color: #f8f8f8;
+    background-color: #E81D62;
+    border-color: #c51954;
+}
+
+.btn-pink:hover {
+    color: #fff;
+    background-color: #c51954;
+    border-color: #c51954;
+}

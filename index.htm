@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta name="description" content="pomodoro">
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="pomodoro.js"></script>
+    <link rel="stylesheet" href="pomodoro.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="buttons">
+            <button class="btn btn-teal" id="bn">-</button>
+            <button class="btn btn-teal" id="_break">5</button>
+            <button class="btn btn-teal" id="bp">+</button>
+            <span id="space">
+                <font color="teal">break<font>&nbsp;&nbsp;<font color="orange">session</font>
+            </span>
+            <button class="btn btn-orange" id="sn">-</button>
+            <button class="btn btn-orange" id="session">12</button>
+            <button class="btn btn-orange" id="sp">+</button>
+        </div>
+        <canvas id="myCanvas" width="500" height="315"></canvas>
+        <div id="buttons2">
+            <button class="btn btn-default" id="start">START</button>
+            <button class="btn btn-pink" id="stop">STOP</button>
+        </div>
+        <br />
+        <br />
+        <h1 id="title">Pomodoro Clock</h1>
+        <h6 id="by">by Laszlo Barjak</h6>
+    </div>
+</body>
+
+</html>
