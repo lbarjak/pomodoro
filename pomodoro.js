@@ -5,7 +5,7 @@ $(function () {
         k, k2 = 0,
         duration = 0,
         countdown = 0,
-        snd = new Audio("http://freewavesamples.com/files/Alesis-Sanctuary-QCard-Loose-Bell-C5.wav");
+        snd = new Audio("https://freewavesamples.com/files/Alesis-Sanctuary-QCard-Loose-Bell-C5.wav");
 
     $("#session").html(session);
     $("#_break").html(_break);
