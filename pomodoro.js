@@ -1,11 +1,20 @@
 $(function () {
 
-    var session = 25,
-        _break = 10,
+    var session = 25,//25
+        _break = 10,//10
         k, k2 = 0,
         duration = 0,
         countdown = 0,
         snd = new Audio("https://freewavesamples.com/files/Alesis-Sanctuary-QCard-Loose-Bell-C5.wav");
+
+    var noOfRepetitions = 1;
+    snd.addEventListener('ended', function () {
+        noOfRepetitions = noOfRepetitions - 1;
+        if (noOfRepetitions > 0) {
+            this.currentTime = 0;
+            this.play()
+        };
+    }, false);
 
     $("#session").html(session);
     $("#_break").html(_break);
@@ -59,6 +68,8 @@ $(function () {
         $("#stop").click(function () {
             $("#stop").prop('disabled', true);
             snd.play();
+            noOfRepetitions = 1;
+            console.log("stop");
             $("#sp").prop('disabled', false);
             $("#session").prop('disabled', false);
             $("#sn").prop('disabled', false);
@@ -75,9 +86,11 @@ $(function () {
             countdown--;
             k2 = (duration - countdown) / duration;
             if (duration - countdown == session * 60) {
+                noOfRepetitions = 3;
                 snd.play();
             }
             if (duration - countdown == (session + _break) * 60) {
+                noOfRepetitions = 30;
                 snd.play();
             }
 
@@ -94,7 +107,6 @@ $(function () {
             }
         }, 1000);
     });
-
 
     function draw() {
 
