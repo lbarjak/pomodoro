@@ -1,7 +1,11 @@
 $(function () {
 
-    var session = 25,//25
+    var maxSession = 60,//60
+        maxBreak = 20,//20
+        session = 25,//25
         _break = 10,//10
+        stepSession = 5,//5
+        stepBreak = 1,//1
         k, k2 = 0,
         duration = 0,
         countdown = 0,
@@ -20,8 +24,8 @@ $(function () {
     $("#_break").html(_break);
 
     $("#sp").click(function () {
-        if (session < 60) {
-            session += 1;
+        if (session < maxSession) {
+            session += stepSession;
             $("#session").html(session);
         }
     });
@@ -30,15 +34,15 @@ $(function () {
         $("#session").html(session);
     });
     $("#sn").click(function () {
-        if (session > 1) {
-            session -= 1;
+        if (session > stepSession) {
+            session -= stepSession;
             $("#session").html(session);
         }
     });
 
     $("#bp").click(function () {
-        if (_break < 20) {
-            _break += 1;
+        if (_break < maxBreak) {
+            _break += stepBreak;
             $("#_break").html(_break);
         }
     });
@@ -47,8 +51,8 @@ $(function () {
         $("#_break").html(_break);
     });
     $("#bn").click(function () {
-        if (_break > 1) {
-            _break -= 1;
+        if (_break > stepBreak) {
+            _break -= stepBreak;
             $("#_break").html(_break);
         }
     });
