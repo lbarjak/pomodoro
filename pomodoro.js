@@ -2,16 +2,19 @@ $(function () {
 
     var maxSession = 60,//60
         maxBreak = 20,//20
-        session = 25,//25
-        _break = 10,//10
+        defaultSession = 25,//25
+        session,
+        defaultBreak = 10,//10
+        _break,
         stepSession = 5,//5
         stepBreak = 1,//1
         k, k2 = 0,
         duration = 0,
         countdown = 0,
-        snd = new Audio("https://freewavesamples.com/files/Alesis-Sanctuary-QCard-Loose-Bell-C5.wav");
-
-    var noOfRepetitions = 1;
+        snd = new Audio("https://freewavesamples.com/files/Alesis-Sanctuary-QCard-Loose-Bell-C5.wav"),
+        noOfRepetitions = 1;
+    session = defaultSession;
+    _break = defaultBreak;
     snd.addEventListener('ended', function () {
         noOfRepetitions = noOfRepetitions - 1;
         if (noOfRepetitions > 0) {
@@ -30,7 +33,7 @@ $(function () {
         }
     });
     $("#session").click(function () {
-        session = 40;
+        session = defaultSession;
         $("#session").html(session);
     });
     $("#sn").click(function () {
@@ -47,7 +50,7 @@ $(function () {
         }
     });
     $("#_break").click(function () {
-        _break = 10;
+        _break = defaultBreak;
         $("#_break").html(_break);
     });
     $("#bn").click(function () {
