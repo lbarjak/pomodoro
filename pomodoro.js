@@ -7,7 +7,7 @@ $(function () {
         defaultBreak = 10,//10
         _break,
         stepSession = 5,//5
-        stepBreak = 1,//1
+        stepBreak = 5,//1
         k, k2 = 0,
         duration = 0,
         countdown = 0,
@@ -93,11 +93,11 @@ $(function () {
             countdown--;
             k2 = (duration - countdown) / duration;
             if (duration - countdown == session * 60) {
-                noOfRepetitions = 3;
+                noOfRepetitions = 2;
                 snd.play();
             }
             if (duration - countdown == (session + _break) * 60) {
-                noOfRepetitions = 30;
+                noOfRepetitions = 2;
                 snd.play();
             }
 
